@@ -1,0 +1,155 @@
+/* src/pages/AuthPages.css */
+/* Use Inter font from Google Fonts: */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+}
+
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left (white) side with form */
+.auth-left {
+  width: 40%;
+  background-color: #fff;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* put brand at top */
+}
+
+.auth-left .brand {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem; /* space below brand/logo */
+}
+
+.auth-left .brand img {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+.auth-left .brand h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #646cff; /* or your chosen brand color */
+  margin: 0;
+}
+
+.auth-left h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #111111;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  color: #4a4a4a;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.forgot-password {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: right;
+  margin-top: -0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: #6176D2;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #6176D2;
+}
+
+.or-continue {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  margin: 1.4rem 0 0.8rem 0;
+}
+
+.social-logins {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.social-logins img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.switch-auth {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+.switch-auth a {
+  color: #646cff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.switch-auth a:hover {
+  text-decoration: underline;
+}
+
+/* Right side with background image */
+.auth-right {
+  width: 60%;
+  background-image: url("C:\Users\Priyansh Tyagi\Documents\GitHub\Automated-News-Mailer\MVP\frontend\public\images\bg1 (1).png"), url("C:\Users\Priyansh Tyagi\Documents\GitHub\Automated-News-Mailer\MVP\frontend\public\images\bg1 (2).png");
+  background-position: center, right center; 
+  background-size: cover, contain;
+  position: relative; /* if you want to absolutely place anything here */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .auth-container {
+    flex-direction: column;
+  }
+  .auth-left, .auth-right {
+    width: 100%;
+  }
+  .auth-right {
+    min-height: 40vh; /* so you still see part of the image on mobile */
+  }
+}

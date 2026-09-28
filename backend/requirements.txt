@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+bcrypt
+pydantic[email]
+pymongo
+python-dotenv
+requests
+beautifulsoup4
